@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arial Games Roblox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg1:#ff914d;
+      --bg2:#4dafff;
+      --card: rgba(0,0,0,0.6);
+      --ink:#fff;
+      --ink-dim:#eaeaea;
+      --btn:#000;
+      --btn-hover:#222;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(to right, var(--bg1), var(--bg2));
+      text-align: center;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(6px);
+      background: rgba(0,0,0,0.35);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .6rem 1rem;
+    }
+    .brand {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      font-weight: 700;
+    }
+    .brand-emoji { font-size: 1.3rem; }
+    .brand-text { font-size: 1.05rem; }
+    .nav-links {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav a, .lang-btn {
+      color: var(--ink);
+      text-decoration: none;
+      padding: .45rem .75rem;
+      border-radius: 8px;
+      transition: background .2s ease;
+      font-size: .95rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .nav a:hover, .lang-btn:hover {
+      background: rgba(255,255,255,0.14);
+    }
+
+    header {
+      padding: 2.2rem 1rem 1.4rem;
+      background: rgba(0,0,0,0.45);
+    }
+    h1 { margin: 0; font-size: 2.2rem; }
+    .section { padding: 2rem 1rem; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.9rem 1.2rem;
+      background: var(--btn);
+      color: var(--ink);
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background .2s ease;
+    }
+    .btn:hover { background: var(--btn-hover); }
+
+    footer {
+      background: rgba(0,0,0,0.5);
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: .95rem;
+      color: var(--ink-dim);
+    }
+
+    .games-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 0 1rem;
+    }
+    .game-card {
+      background: var(--card);
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .game-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .game-card h3 { margin: 0.6rem 0; color: #fff; }
+    .comment-card {
+      border:1px solid rgba(255,255,255,0.35);
+      padding:12px;
+      border-radius: 10px;
+      margin:10px 0;
+      background: rgba(0,0,0,0.35);
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="brand-emoji">🎮</span>
+        <span class="brand-text">Arial Games Roblox</span>
+      </div>
+      <div class="nav-links">
+        <a href="#catalogo" data-es="Catálogo" data-en="Catalogo">Catálogo</a>
+        <a href="#juegos" data-es="Mis Juegos" data-en="Our Games">Mis Juegos</a>
+        <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+        <a href="#retroalimentacion" data-es="Retroalimentación" data-en="Feedback">Retroalimentación</a>
+        <button class="lang-btn" onclick="toggleLang()">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>🎮 Arial Games Roblox 🎮</h1>
+    <p data-es="Bienvenido a mi página de juegos" data-en="Welcome to my game page">Bienvenido a mi página de juegos</p>
+  </header>
+
+  <div class="section" id="catalogo">
+    <h2 data-es="Nuestro catálogo de juegos" data-en="Our game catalog">Nuestro catálogo de juegos</h2>
+    <p data-es="¡Próximamente más!" data-en="More coming soon!">¡Próximamente más!</p>
+  </div>
+
+  <div class="section" id="juegos">
+    <h2 data-es="Mis Juegos" data-en="Our Games">Mis Juegos</h2>
+    <div class="games-grid">
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/180DAY-22e4de2bcf91bcca1a82aa1085eff265/352/352/Image/Png/noFilter" alt="LifeCity RP">
+        <h3>LifeCity RP</h3>
+        <a class="btn" href="https://www.roblox.com/games/127982674688588" target="_blank">🎮 <span data-es="Jugar" data-en="Play">Jugar</span></a>
+      </div>
+
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/180DAY-ece7460557252296617db0d37f6faea9/352/352/Image/Png/noFilter" alt="SweeCruiseLines">
+        <h3>SweeCruiseLines</h3>
+        <a class="btn" href="https://www.roblox.com/games/72246211193176" target="_blank">🎮 <span data-es="Jugar" data-en="Play">Jugar</span></a>
+      </div>
+
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/180DAY-f1aef91f14da3f77fa9a03eb5dcfb37a/352/352/Image/Png/noFilter" alt="AirportGo">
+        <h3>AirportGo</h3>
+        <a class="btn" href="https://www.roblox.com/games/76785662111709" target="_blank">🎮 <span data-es="Jugar" data-en="Play">Jugar</span></a>
+      </div>
+
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/180DAY-bfdfcf20661846a34fd3610596e5d416/352/352/Image/Png/noFilter" alt="Física de colisión de coches">
+        <h3>Física de colisión de coches</h3>
+        <a class="btn" href="https://www.roblox.com/games/115550822010450" target="_blank">🎮 <span data-es="Jugar" data-en="Play">Jugar</span></a>
+      </div>
+
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/180DAY-544907c627e3e1a5a42cc7c22c117d63/352/352/Image/Png/noFilter" alt="Simulador de diversión ultra edition">
+        <h3>Simulador de diversión ultra edition</h3>
+        <a class="btn" href="https://www.roblox.com/games/73254702442712" target="_blank">🎮 <span data-es="Jugar" data-en="Play">Jugar</span></a>
+      </div>
+
+      <div class="game-card">
+        <img src="https://tr.rbxcdn.com/180DAY-231ebeccb7ab38f1f2d489e6db302d36/768/432/Image/Webp/noFilter" alt="SnowFun">
+        <h3>SnowFun</h3>
+        <a class="btn" href="https://www.roblox.com/games/130223704802543" target="_blank">🎮 <span data-es="Jugar" data-en="Play">Jugar</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="contacto">
+    <h2 data-es="📢 Contacto" data-en="📢 Contact">📢 Contacto</h2>
+    <p data-es="Nuestra comunidad:" data-en="Our community:">Nuestra comunidad:</p>
+    <a class="btn" href="https://www.roblox.com/groups/35915748/Arial-Games" target="_blank">👉 Arial Games en Roblox</a>
+  </div>
+
+  <div class="section" id="retroalimentacion">
+    <h2 data-es="💬 Retroalimentación" data-en="💬 Feedback">💬 Retroalimentación</h2>
+    <p data-es="Dejá tu comentario sobre un juego:" data-en="Leave your feedback about a game:">Dejá tu comentario sobre un juego:</p>
+
+    <form id="feedbackForm">
+      <label for="game">Juego:</label>
+      <select id="game" required>
+        <option>LifeCity RP</option>
+        <option>SweeCruiseLines</option>
+        <option>AirportGo</option>
+        <option>Física de colisión de coches</option>
+        <option>Simulador de diversión ultra edition</option>
+        <option>SnowFun</option>
+      </select>
+
+      <label for="name">Tu nombre:</label>
+      <input type="text" id="name" required />
+
+      <label for="opinion">Opinión:</label>
+      <select id="opinion" required>
+        <option value="Positivo">Positivo 😀</option>
+        <option value="Negativo">Negativo 😞</option>
+      </select>
+
+      <label for="comment">Comentario:</label>
+      <textarea id="comment" rows="3" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <hr />
+
+    <h3 data-es="🔎 Buscar comentarios" data-en="🔎 Search comments">🔎 Buscar comentarios</h3>
+    <input type="text" id="searchGame" placeholder="Escribe el nombre del juego..." />
+    <button onclick="searchComments()">Buscar</button>
+    <div id="commentsList"></div>
+  </div>
+
+  <footer>
+    <p>© 2025 Arial Games Roblox</p>
+  </footer>
+
+  <script>
+    let lang = "es";
+    function toggleLang() {
+      lang = (lang === "es") ? "en" : "es";
+      document.querySelectorAll("[data-es]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + lang);
+      });
+      document.querySelector(".lang-btn").innerText = (lang === "es") ? "EN" : "ES";
+    }
+
+    const form = document.getElementById('feedbackForm');
+    const comments = [];
+    const commentsList = document.getElementById('commentsList');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const game = document.getElementById('game').value;
+      const name = document.getElementById('name').value;
+      const opinion = document.getElementById('opinion').value;
+      const comment = document.getElementById('comment').value;
+      comments.push({ game, name, opinion, comment });
+      form.reset();
+      alert(lang === "es" ? "¡Gracias por tu comentario!" : "Thanks for your feedback!");
+    });
+
+    function searchComments() {
+      const searchValue = document.getElementById('searchGame').value.toLowerCase();
+      commentsList.innerHTML = '';
+      const filtered = comments.filter(c => c.game.toLowerCase().includes(searchValue));
+      if (filtered.length === 0) {
+        commentsList.innerHTML = '<p>'+(lang==="es" ? "No se encontraron comentarios." : "No comments found.")+'</p>';
+      } else {
+        filtered.forEach(c => {
+          commentsList.innerHTML += `<div class="comment-card">
+            <strong>${c.game}</strong> - ${c.name} (${c.opinion})<br>
+            ${c.comment}
+          </div>`;
+        });
+      }
+    }
+  </script>
+</body>
+</html>
